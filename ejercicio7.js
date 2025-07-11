@@ -1,20 +1,24 @@
-function convertirMoneda(monto, monedaDestino) {
-    let tasaCambio;
+const readline = require('readline');
 
-    if (monedaDestino === 'USD') {
-        tasaCambio = 0.00026;
-    } else if (monedaDestino === 'EUR') {
-        tasaCambio = 0.00024;
-    } else {
-        console.log("Moneda no valida");
-        return;
-    }
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-    let resultado = monto * tasaCambio
-    console.log(`${monto} COP equivalen a ${resultado.toFixed(2)} ${monedaDestino}`);
+function retirarDinero(saldo, monto) {
+  if (monto <= saldo) {
+    let nuevoSaldo = saldo - monto;
+    console.log(`Retiro exitoso. Tu nuevo saldo es: $${nuevoSaldo}`);
+  } else {
+    console.log("Fondos insuficientes.");
+  }
 }
 
-let montoCOP = Number(prompt("Ingresa el monto en pesos colombianos (COP):"));
-let moneda = prompt("¿A qué moneda deseas convertir? (USD o EUR)").toUpperCase();
-
-convertirMoneda(montoCOP, moneda);
+rl.question("Ingresa tu saldo actual: ", (saldoInput) => {
+  rl.question("¿Cuánto deseas retirar?: ", (montoInput) => {
+    let saldo = Number(saldoInput);
+    let monto = Number(montoInput);
+    retirarDinero(saldo, monto);
+    rl.close();
+  });
+});
