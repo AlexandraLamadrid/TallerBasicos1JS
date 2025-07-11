@@ -1,0 +1,23 @@
+{
+  "name": "tallerbasicos1js",
+  "version": "1.0.0",
+  "description": "Ejercicios laboratorio JS 11 de Julio",
+  "main": "ejercicio1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandraLamadrid/TallerBasicos1JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandraLamadrid/TallerBasicos1JS/issues"
+  },
+  "homepage": "https://github.com/AlexandraLamadrid/TallerBasicos1JS#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
