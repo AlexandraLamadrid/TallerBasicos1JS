@@ -1,0 +1,15 @@
+{
+  "name": "tallerbasicos1js",
+  "version": "1.0.0",
+  "description": "Ejercicios laboratorio JS 11 de Julio",
+  "main": "ejercicio7.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
